@@ -13,7 +13,7 @@ ENV MYSQL_PASS=Sellers123!@#
 
 #USER mysql:mysql
 
-COPY Dump20200324.sql /  
+COPY Dump20200324.sql.gz /  
 COPY my.cnf /etc/mysql/  
 
 
