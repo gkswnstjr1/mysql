@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    registry = "uni-shpark/myweb"
+    registry = "gkswnstjr1/mysql"
     dockerImage = ""
   }
 
@@ -12,7 +12,7 @@ pipeline {
     stage('Checkout Source') {
       steps {
         echo "Checkout Source START"
-        git 'https://github.com/uni-shpark/mysql.git'
+        git 'https://github.com/gkswnstjr1/mysql.git'
         echo "Checkout Source END"
       }
     }
@@ -21,7 +21,7 @@ pipeline {
       steps{
         script {
           echo "Build image START $BUILD_NUMBER"
-          dockerImage = docker.build("suhyung007/sellers:mysql-$BUILD_NUMBER")
+          dockerImage = docker.build("jun2324/mysql:latest-$BUILD_NUMBER")
           echo "Build image END"
         }
       }
