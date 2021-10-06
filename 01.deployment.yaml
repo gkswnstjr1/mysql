@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: mysql
-          image: jun2324/mysql:17
+          image: jun2324/mysql:mysql-17
           ports:
             - containerPort: 3306
           volumeMounts:
